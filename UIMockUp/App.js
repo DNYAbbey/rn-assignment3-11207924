@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image, TextInput, TouchableOpacity, } from 'react-native';
 
 export default function App() {
   return (
@@ -10,9 +10,14 @@ export default function App() {
           <Text style={styles.paragraph}>14 tasks today</Text>
         </View>
         <View style={styles.profileimgContainer}><Image source={require('./assets/profileimg.png')} style={styles.profileimg} /></View>
-        
       </View>
-      
+      <View style={styles.intro}>
+        <View> 
+          <TextInput placeholder='Search' style={styles.searchbar}/>
+          <Image source={require('./assets/searchicon.png')} style={styles.searchicon} />
+        </View>
+        <TouchableOpacity style={styles.filter}><Image source={require('./assets/filtericon.png')} style={styles.filtericon} /></TouchableOpacity>
+      </View>
     </ScrollView>
   );
 }
@@ -52,5 +57,38 @@ const styles = StyleSheet.create({
     height: '43px',
     margin: 'auto',
     zIndex: 100,
+  },
+  searchbar:{
+    border: 'solid 1px  #FBF9F7',
+    borderRadius: '14px',
+    width: '100%',
+    height: '49px',
+    paddingLeft: '50px',
+    marginLeft: '18px',
+    marginTop: '25px',
+    backgroundColor: '#FBF9F7',
+    fontWeight: '700',
+    fontSize: '16px',
+  }, 
+  searchicon:{
+    position: 'relative',
+    width: '16px',
+    height: '16px',
+    left: '35px',
+    top: '-33px',
+    cursor: 'pointer',
+  },
+  filter:{
+    backgroundColor: '#F0522F',
+    borderRadius:'14px',
+    width: '50px',
+    height: '45px',
+    marginTop: '25px',
+    marginRight: '20px',
+  },
+  filtericon:{
+    height: '25.5px',
+    width: '28.5px',
+    margin: 'auto',
   },
 });
