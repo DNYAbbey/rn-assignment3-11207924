@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView, Image, TextInput, TouchableOpacity, } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image, TextInput, } from 'react-native';
+import CustomButton from './components/CustomButton';
 
 export default function App() {
   return (
@@ -17,7 +18,13 @@ export default function App() {
           <TextInput placeholder='Search' style={styles.searchbar}/>
           <Image source={require('./assets/searchicon.png')} style={styles.searchicon} />
         </View>
-        <TouchableOpacity style={styles.filter}><Image source={require('./assets/filtericon.png')} style={styles.filtericon} /></TouchableOpacity>
+        <CustomButton 
+          onPress={() => console.log('Filter results!')}
+          imageSource={require('./assets/filtericon.png')}
+          accessibilityLabel="Custom filter icon"
+          buttonStyle={styles.customButtonStyle}
+          imageStyle={styles.customImageStyle}
+        />
       </View>
 
       <View>
