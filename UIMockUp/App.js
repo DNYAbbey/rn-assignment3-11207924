@@ -26,34 +26,42 @@ export default function App() {
           <View style={styles.categorycard}>
             <Text style={styles.categoryheader}>Exercise</Text>
             <Text style={styles.paragraph}>12 tasks</Text>
+            <Image source={require('./assets/youngwomanworking.png')} style={styles.categoryCharacter} />
           </View>
           <View style={styles.categorycard}>
             <Text style={styles.categoryheader}>Study</Text>
             <Text style={styles.paragraph}>12 tasks</Text>
+            <Image source={require('./assets/womanworking.png')} style={styles.categoryCharacter} />
           </View>
           <View style={styles.categorycard}>
             <Text style={styles.categoryheader}>Cook</Text>
             <Text style={styles.paragraph}>12 tasks</Text>
+            <Image source={require('./assets/casual-life-3d-boy-cook.png')} style={styles.categoryCharacter} />
           </View>
           <View style={styles.categorycard}>
             <Text style={styles.categoryheader}>Code</Text>
             <Text style={styles.paragraph}>12 tasks</Text>
+            <Image source={require('./assets/womanworking.png')} style={styles.categoryCharacter} />
           </View>
           <View style={styles.categorycard}>
             <Text style={styles.categoryheader}>Assignments</Text>
             <Text style={styles.paragraph}>12 tasks</Text>
+            <Image source={require('./assets/casual-life-3d-young-woman-looking-at-laptop-and-taking-notes-in-notebook.png')} style={styles.categoryCharacter} />
           </View>
           <View style={styles.categorycard}>
             <Text style={styles.categoryheader}>Clean</Text>
             <Text style={styles.paragraph}>12 tasks</Text>
+            <Image source={require('./assets/3d-casual-life-cleaning-service.png')} style={styles.categoryCharacter} />
           </View>
           <View style={styles.categorycard}>
             <Text style={styles.categoryheader}>Attend Lectures</Text>
             <Text style={styles.paragraph}>12 tasks</Text>
+            <Image source={require('./assets/3d-casual-life-young-people-listening-to-a-lecture.png')} style={styles.categoryCharacter} />
           </View>
           <View style={styles.categorycard}>
-            <Text style={styles.categoryheader}>Learn New Skill</Text>
+            <Text style={styles.categoryheader}>Raed Books</Text>
             <Text style={styles.paragraph}>12 tasks</Text>
+            <Image source={require('./assets/3d-business-little-girl-reading-a-book.png')} style={styles.categoryCharacter} />
           </View>
         </ScrollView>
       </View>
@@ -139,7 +147,7 @@ const styles = StyleSheet.create({
   categorycard:{
     backgroundColor: '#FBF9F7',
     width: '186px',
-    height: '192px',
+    height: '200px',
     margin: '20px',
     borderRadius: '15px',
   },
@@ -148,5 +156,12 @@ const styles = StyleSheet.create({
     marginLeft: '20px',
     marginTop: '15px',
     fontWeight: '700',
-  }
+  },
+  categoryCharacter:{
+    position: 'absolute',
+    width: '151px',
+    height: '145px',
+    left: '25px',
+    top: '55px',
+  },
 });
