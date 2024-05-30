@@ -11,12 +11,51 @@ export default function App() {
         </View>
         <View style={styles.profileimgContainer}><Image source={require('./assets/profileimg.png')} style={styles.profileimg} /></View>
       </View>
+
       <View style={styles.intro}>
         <View> 
           <TextInput placeholder='Search' style={styles.searchbar}/>
           <Image source={require('./assets/searchicon.png')} style={styles.searchicon} />
         </View>
         <TouchableOpacity style={styles.filter}><Image source={require('./assets/filtericon.png')} style={styles.filtericon} /></TouchableOpacity>
+      </View>
+
+      <View>
+        <Text style={styles.subheader}>Categories</Text>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}> 
+          <View style={styles.categorycard}>
+            <Text style={styles.categoryheader}>Exercise</Text>
+            <Text style={styles.paragraph}>12 tasks</Text>
+          </View>
+          <View style={styles.categorycard}>
+            <Text style={styles.categoryheader}>Study</Text>
+            <Text style={styles.paragraph}>12 tasks</Text>
+          </View>
+          <View style={styles.categorycard}>
+            <Text style={styles.categoryheader}>Cook</Text>
+            <Text style={styles.paragraph}>12 tasks</Text>
+          </View>
+          <View style={styles.categorycard}>
+            <Text style={styles.categoryheader}>Code</Text>
+            <Text style={styles.paragraph}>12 tasks</Text>
+          </View>
+          <View style={styles.categorycard}>
+            <Text style={styles.categoryheader}>Assignments</Text>
+            <Text style={styles.paragraph}>12 tasks</Text>
+          </View>
+          <View style={styles.categorycard}>
+            <Text style={styles.categoryheader}>Clean</Text>
+            <Text style={styles.paragraph}>12 tasks</Text>
+          </View>
+          <View style={styles.categorycard}>
+            <Text style={styles.categoryheader}>Attend Lectures</Text>
+            <Text style={styles.paragraph}>12 tasks</Text>
+          </View>
+          <View style={styles.categorycard}>
+            <Text style={styles.categoryheader}>Learn New Skill</Text>
+            <Text style={styles.paragraph}>12 tasks</Text>
+          </View>
+        </ScrollView>
       </View>
     </ScrollView>
   );
@@ -91,4 +130,23 @@ const styles = StyleSheet.create({
     width: '28.5px',
     margin: 'auto',
   },
+  subheader:{
+    fontSize: '20px',
+    fontWeight: '700',
+    marginLeft: '23px',
+    marginTop: '42px',
+  },
+  categorycard:{
+    backgroundColor: '#FBF9F7',
+    width: '186px',
+    height: '192px',
+    margin: '20px',
+    borderRadius: '15px',
+  },
+  categoryheader:{
+    fontSize: '16px',
+    marginLeft: '20px',
+    marginTop: '15px',
+    fontWeight: '700',
+  }
 });
