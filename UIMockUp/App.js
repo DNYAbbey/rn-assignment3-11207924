@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView, Image, TextInput, } from 'react-native';
 import CustomButton from './components/CustomButton';
+import CategoryCard from './components/CategoryCard';
 
 export default function App() {
   return (
@@ -30,46 +31,14 @@ export default function App() {
       <View>
         <Text style={styles.subheader}>Categories</Text>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}> 
-          <View style={styles.categorycard}>
-            <Text style={styles.categoryheader}>Exercise</Text>
-            <Text style={styles.paragraph}>12 tasks</Text>
-            <Image source={require('./assets/youngwomanworking.png')} style={styles.categoryCharacter} />
-          </View>
-          <View style={styles.categorycard}>
-            <Text style={styles.categoryheader}>Study</Text>
-            <Text style={styles.paragraph}>12 tasks</Text>
-            <Image source={require('./assets/womanworking.png')} style={styles.categoryCharacter} />
-          </View>
-          <View style={styles.categorycard}>
-            <Text style={styles.categoryheader}>Cook</Text>
-            <Text style={styles.paragraph}>12 tasks</Text>
-            <Image source={require('./assets/casual-life-3d-boy-cook.png')} style={styles.categoryCharacter} />
-          </View>
-          <View style={styles.categorycard}>
-            <Text style={styles.categoryheader}>Code</Text>
-            <Text style={styles.paragraph}>12 tasks</Text>
-            <Image source={require('./assets/womanworking.png')} style={styles.categoryCharacter} />
-          </View>
-          <View style={styles.categorycard}>
-            <Text style={styles.categoryheader}>Assignments</Text>
-            <Text style={styles.paragraph}>12 tasks</Text>
-            <Image source={require('./assets/casual-life-3d-young-woman-looking-at-laptop-and-taking-notes-in-notebook.png')} style={styles.categoryCharacter} />
-          </View>
-          <View style={styles.categorycard}>
-            <Text style={styles.categoryheader}>Clean</Text>
-            <Text style={styles.paragraph}>12 tasks</Text>
-            <Image source={require('./assets/3d-casual-life-cleaning-service.png')} style={styles.categoryCharacter} />
-          </View>
-          <View style={styles.categorycard}>
-            <Text style={styles.categoryheader}>Attend Lectures</Text>
-            <Text style={styles.paragraph}>12 tasks</Text>
-            <Image source={require('./assets/3d-casual-life-young-people-listening-to-a-lecture.png')} style={styles.categoryCharacter} />
-          </View>
-          <View style={styles.categorycard}>
-            <Text style={styles.categoryheader}>Raed Books</Text>
-            <Text style={styles.paragraph}>12 tasks</Text>
-            <Image source={require('./assets/3d-business-little-girl-reading-a-book.png')} style={styles.categoryCharacter} />
-          </View>
+        <CategoryCard imageSource ={require('./assets/youngwomanworking.png')} header={'Exercise'} tasks={'12 tasks'} />
+          <CategoryCard imageSource ={require('./assets/womanworking.png')} header={'Study'} tasks={'12 tasks'} />
+          <CategoryCard imageSource ={require('./assets/casual-life-3d-boy-cook.png')} header={'Cook'} tasks={'12 tasks'} />
+          <CategoryCard imageSource ={require('./assets/womanworking.png')} header={'Code'} tasks={'12 tasks'} />
+          <CategoryCard imageSource ={require('./assets/3d-casual-life-cleaning-service.png')} header={'Clean'} tasks={'12 tasks'} />
+          <CategoryCard imageSource ={require('./assets/casual-life-3d-young-woman-looking-at-laptop-and-taking-notes-in-notebook.png')} header={'Assignments'} tasks={'12 tasks'} />
+          <CategoryCard imageSource ={require('./assets/3d-casual-life-young-people-listening-to-a-lecture.png')} header={'Meetings'} tasks={'12 tasks'} />
+          <CategoryCard imageSource ={require('./assets/3d-business-little-girl-reading-a-book.png')} header={'Read Books'} tasks={'12 tasks'} />
         </ScrollView>
       </View>
     </ScrollView>
@@ -132,43 +101,10 @@ const styles = StyleSheet.create({
     top: '-33px',
     cursor: 'pointer',
   },
-  filter:{
-    backgroundColor: '#F0522F',
-    borderRadius:'14px',
-    width: '50px',
-    height: '45px',
-    marginTop: '25px',
-    marginRight: '20px',
-  },
-  filtericon:{
-    height: '25.5px',
-    width: '28.5px',
-    margin: 'auto',
-  },
   subheader:{
     fontSize: '20px',
     fontWeight: '700',
     marginLeft: '23px',
     marginTop: '42px',
-  },
-  categorycard:{
-    backgroundColor: '#FBF9F7',
-    width: '186px',
-    height: '200px',
-    margin: '20px',
-    borderRadius: '15px',
-  },
-  categoryheader:{
-    fontSize: '16px',
-    marginLeft: '20px',
-    marginTop: '15px',
-    fontWeight: '700',
-  },
-  categoryCharacter:{
-    position: 'absolute',
-    width: '151px',
-    height: '145px',
-    left: '25px',
-    top: '55px',
   },
 });
