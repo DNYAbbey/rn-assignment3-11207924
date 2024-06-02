@@ -12,3 +12,11 @@
 - Button: is used to create a clickable button. It can trigger actions such as navigation or submitting a form when pressed.
 - FlatList or SectionList for rendering lists of tasks: these are components for rendering lists of data. FlatList renders a basic list, while SectionList renders grouped sections of data.
 - Image for icons and displaying images: this component is used to display images in the app. It supports various image formats and can be styled.
+- Custom components:  are user-defined elements that encapsulate reusable code, styles, and functionality. 
+
+### Screenshots of Application
+![Image 1](images/rnshot-1.PNG)
+
+![Image 2](images/rnshot-2.PNG)
+
+![Image 3](images/rnshot-3.PNG)
