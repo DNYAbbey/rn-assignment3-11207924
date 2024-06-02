@@ -15,8 +15,8 @@
 - Custom components:  are user-defined elements that encapsulate reusable code, styles, and functionality. 
 
 ### Screenshots of Application
-![Image 1](images/rnshot-1.PNG)
+![Image 1](UIMockUp/images/rnshot-1.PNG)
 
-![Image 2](images/rnshot-2.PNG)
+![Image 2](UIMockUp/images/rnshot-2.PNG)
 
-![Image 3](images/rnshot-3.PNG)
+![Image 3](UIMockUp/images/rnshot-3.PNG)
